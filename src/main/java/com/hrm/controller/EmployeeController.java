@@ -21,7 +21,10 @@ public class EmployeeController {
 	
 	@Autowired
 	private EmployeeServiceImpl service;
-	
+
+	public int add2Num(int a, int b){
+	return a+b;
+	}
 	@GetMapping(value = "/get-employee-by-id/{id}",produces = {MediaType.APPLICATION_JSON_VALUE})
 	public ResponseEntity<Employee> getEmployeeById(@PathVariable int id) {
 		Employee employee=service.showtEmployeeById(id);
